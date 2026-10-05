@@ -188,7 +188,7 @@
   <div class="hero">
     <h1 data-i18n="heroTitle">Heures RGIS &amp; estimateur de paie — Julien (Shenn)</h1>
     <div class="hero-bar"></div>
-    <p data-i18n="heroSub">Enquêteur vacataire chez RGIS (inventaires) · CDD d'usage (contrat temporaire d'usage, pour des missions ponctuelles terminées le jour même) · 12,31 € brut/h · précarité 4% + congés payés 10%. Toutes les heures affichées ont été travaillées et vérifiées d'après les captures d'application.</p>
+    <p data-i18n="heroSub">Enquêteur vacataire chez RGIS (inventaires) · CDD d'usage (contrat temporaire d'usage, pour des missions ponctuelles terminées le jour même) · 12,31 € brut/h · précarité 4% + congés payés 10%. Toutes les heures affichées ont été réellement travaillées.</p>
   </div>
 
   <div class="notice" id="noticeCard">
@@ -243,9 +243,9 @@
   <section>
     <div class="card">
       <h2><span class="n">2</span><span data-i18n="s2Title">Les missions de Julien</span></h2>
-      <p class="desc" data-i18n="s2Desc">Toutes les missions sont saisies et vérifiées d'après les captures d'écran de l'application. La lune 🌙 = mission de nuit (majoration auto). Lecture seule — les mises à jour se font via les captures.</p>
+      <p class="desc" data-i18n="s2Desc">Toutes les missions ont été réellement travaillées. La lune 🌙 = mission de nuit (majoration automatique).</p>
       <div class="tbl-scroll-hint" data-i18n="scrollHint">← Fais glisser le tableau pour voir tout →</div>
-      <div class="callout tip"><span class="ic">💡</span><div data-i18n="coTbl">La lune <b class="hl">🌙</b> indique une mission comptée comme du <b class="hl">travail de nuit</b> : elle finit après 21 h ou passe minuit. Ces heures sont payées <b class="hl">plus cher</b> que les autres — l'estimateur les majore automatiquement. Le <b class="hl">✓ vérifiée</b> signifie que les chiffres proviennent des captures de l'application RGIS, pas d'une estimation.</div></div>
+      <div class="callout tip"><span class="ic">💡</span><div data-i18n="coTbl">La lune <b class="hl">🌙</b> indique une mission comptée comme du <b class="hl">travail de nuit</b> : elle finit après 21 h ou passe minuit. Ces heures sont payées <b class="hl">plus cher</b> que les autres — l'estimateur les majore automatiquement. Le <b class="hl">✓</b> indique une mission confirmée et réellement travaillée.</div></div>
       <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
       <table id="tbl" style="min-width:640px">
         <thead><tr>
@@ -321,7 +321,7 @@
 
 <footer class="botbar"><div class="botbar-in">
   <span>RGIS</span>
-  <span>·</span><span>v1.4.3</span>
+  <span>·</span><span>v1.4.4</span>
   <span>·</span><span data-i18n="botNote">Estimations non contractuelles</span>
 </div></footer>
 
@@ -330,7 +330,7 @@
 const I18N = {
   en: {
     brand:"Julien (Shenn)'s hours & pay", heroTitle:"RGIS hours & pay estimator — Julien (Shenn)",
-    heroSub:"Inventory auditor at RGIS · CDD d'usage (a French fixed-term contract for occasional, same-day missions) · €12.31 gross/h · 4% precarity + 10% paid leave. All hours shown have been worked and verified from app screenshots.",
+    heroSub:"Inventory auditor at RGIS · CDD d'usage (a French fixed-term contract for occasional, same-day missions) · €12.31 gross/h · 4% precarity + 10% paid leave. All hours shown have been actually worked.",
     noticeTitle:"The official RGIS message — September 2026 pay schedule",
     noticeDate:"Communication of 23/09/2026 · 09:36 · translated from French",
     noticeBtn:"⚠️ Important — read me",
@@ -341,14 +341,14 @@ const I18N = {
     noticeP5:"September pay takes into account variable items (meal allowances, leave, bonuses) from 15/08 to 11/09/2026.\"",
     noticeNote:"📌 Faithful translation of the original message — dates stay in day/month/year format.",
     coSim:"The <b class=\"hl\">pre-filled values come from Julien's contract</b> (Articles 4 and 6): <b class=\"hl\">€12.31/h</b> gross, <b class=\"hl\">4%</b> precarity (Art. 4) and <b class=\"hl\">10% paid leave</b> (Art. 6) — both are added to the pay. The only free setting: the <b class=\"hl\">night premium</b> — the contract says one exists (company agreement), but the exact rate isn't written in it.",
-    coTbl:"The moon <b class=\"hl\">🌙</b> indicates a mission counted as <b class=\"hl\">night work</b>: it ends after 9 PM or past midnight. Those hours are paid <b class=\"hl\">more</b> — the estimator applies the premium automatically. The <b class=\"hl\">✓ verified</b> means the figures come from the RGIS app screenshots, not an estimate.",
+    coTbl:"The moon <b class=\"hl\">🌙</b> indicates a mission counted as <b class=\"hl\">night work</b>: it ends after 9 PM or past midnight. Those hours are paid <b class=\"hl\">more</b> — the estimator applies the premium automatically. The <b class=\"hl\">✓</b> marks a confirmed, actually-worked mission.",
     coPay:"Why <b class=\"hl\">two transfers</b>? Because a CDD d'usage — in France, a type of fixed-term contract allowed for occasional jobs like inventory counting — starts and ends <b class=\"hl\">on the day of each mission</b>. RGIS pays all contracts ended between Sep 12–30 <b class=\"hl\">on Oct 12</b>, and the early-October ones <b class=\"hl\">around Oct 30</b>. So September and October missions don't land in the same transfer.",
     coNet:"Honestly, gross → net is simple: <b class=\"hl\">gross is the price of the work</b> written in the contract. <b class=\"hl\">Net is what lands in the bank account</b> after the State takes its share (pension, health…). The contract always speaks in gross because <b class=\"hl\">net varies with each person's situation</b> — the employer can't promise it in advance.",
     stHours:"Total hours", stGross:"Gross + bonuses", stNet:"Estimated net", stNext:"Next transfer", stNextSub:"September missions",
     s1Title:"The estimator", s1Desc:"Values are those of Julien's contract. The night premium is adjustable: its exact rate is set by the company agreement, not included in the contract.",
     cRate:"Gross hourly rate (€)", cNight:"Night premium (%)", cPrec:"Precarity allowance (%)", cConges:"Paid leave (%)", cNetPct:"Net after contributions (%)",
     lgNet:"Estimated net (before tax)", lgCot:"Employee contributions",
-    s2Title:"Julien's missions", s2Desc:"All missions are entered and verified from the app screenshots. The moon 🌙 = night mission (premium applied automatically). Read-only — updates come from the screenshots.",
+    s2Title:"Julien's missions", s2Desc:"All missions have been actually worked. The moon 🌙 = night mission (premium applied automatically).",
     scrollHint:"← Swipe the table to see everything →", copyTable:"📋 Copy the table",
     thDate:"Date", thPlace:"Place", thTime:"Times", thHours:"Hours", thNight:"Night", thChecked:"Status", ftTotal:"Total",
     verified:"verified",
