@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>RGIS â Mes heures &amp; ma paie</title>
+<title>RGIS — Mes heures &amp; ma paie</title>
 <style>
   :root{ --radius:16px; --radius-sm:12px; }
-  /* ---------- ThÃ¨me JOUR Â· papier de paie ---------- */
+  /* ---------- Thème JOUR · papier de paie ---------- */
   body.day{
     --surface:rgba(255,255,255,.66); --ink:#2b2620; --muted:#7c6f5f;
     --accent:#0d7a68; --accent-ink:#0a5c4f; --accent-soft:rgba(13,122,104,.1);
@@ -26,7 +26,7 @@
       linear-gradient(180deg,#f7f2e8 0%,#f0e9da 100%);
     background-attachment:fixed;
   }
-  /* ---------- ThÃ¨me NUIT Â· verre sombre ---------- */
+  /* ---------- Thème NUIT · verre sombre ---------- */
   body.night{
     --surface:rgba(255,255,255,.09); --ink:#eef4f2; --muted:#9db8b0;
     --accent:#2dd4bf; --accent-ink:#7ce8da; --accent-soft:rgba(45,212,191,.14);
@@ -150,12 +150,12 @@
 <body class="day">
 
 <header class="topbar"><div class="topbar-in">
-  <div class="brand"><span class="dot"></span>RGIS Â· <span data-i18n="brand">Mes heures &amp; ma paie</span></div>
+  <div class="brand"><span class="dot"></span>RGIS · <span data-i18n="brand">Mes heures &amp; ma paie</span></div>
   <div class="langbtns">
-    <button class="btn lang active" id="btnFR">ð«ð· FR</button>
-    <button class="btn lang" id="btnEN">ð¬ð§ EN</button>
+    <button class="btn lang active" id="btnFR">🇫🇷 FR</button>
+    <button class="btn lang" id="btnEN">🇬🇧 EN</button>
   </div>
-  <button class="btn" id="btnTheme" title="Jour / Nuit">ð</button>
+  <button class="btn" id="btnTheme" title="Jour / Nuit">🌙</button>
 </div></header>
 
 <div class="wrap">
@@ -163,52 +163,52 @@
   <div class="hero">
     <h1 data-i18n="heroTitle">Mes heures RGIS &amp; mon estimateur de paie</h1>
     <div class="hero-bar"></div>
-    <p data-i18n="heroSub">CDD d'usage Â· 12,31 â¬ brut/h Â· indemnitÃ© de prÃ©caritÃ© 4%. Modifie tout ce que tu veux : les totaux, les graphiques et les virements se recalculent en direct.</p>
+    <p data-i18n="heroSub">CDD d'usage · 12,31 € brut/h · indemnité de précarité 4%. Modifie tout ce que tu veux : les totaux, les graphiques et les virements se recalculent en direct.</p>
   </div>
 
   <div class="notice" id="noticeCard">
     <div class="notice-head">
-      <span class="notice-icon">ð¢</span>
+      <span class="notice-icon">📢</span>
       <div>
-        <div class="notice-title" data-i18n="noticeTitle">Le message officiel RGIS â rythme de paie de septembre 2026</div>
-        <div class="notice-date" data-i18n="noticeDate">Communication du 23/09/2026 Â· 09:36 Â· traduite du franÃ§ais</div>
+        <div class="notice-title" data-i18n="noticeTitle">Le message officiel RGIS — rythme de paie de septembre 2026</div>
+        <div class="notice-date" data-i18n="noticeDate">Communication du 23/09/2026 · 09:36 · traduite du français</div>
       </div>
-      <button class="btn" id="btnNotice" data-i18n="noticeBtn">â ï¸ Important â lire</button>
+      <button class="btn" id="btnNotice" data-i18n="noticeBtn">⚠️ Important — lire</button>
     </div>
     <div class="notice-body" id="noticeBody">
-      <p data-i18n="noticeP1">Â« Pour information, les documents et virements des paies de la premiÃ¨re quinzaine du mois sont envoyÃ©s en fin de mois.</p>
-      <p data-i18n="noticeP2">Pour le mois de septembre : virement Ã©mis par RGIS le <b>30/09/2026</b> (contrats terminant entre le 01 et le 11/09/2026, ou se poursuivant en octobre). Envoi des documents 24â48 h aprÃ¨s.</p>
-      <p data-i18n="noticeP3">Les documents et virements des paies de la deuxiÃ¨me quinzaine du mois sont envoyÃ©s en Â« milieu Â» de mois suivant.</p>
-      <p data-i18n="noticeP4">Pour le mois de septembre : virement Ã©mis par RGIS le <b>12/10/2026</b> (contrats terminant entre le 12 et le 30/09/2026). Envoi des documents 24â48 h aprÃ¨s.</p>
-      <p data-i18n="noticeP5">La paie de septembre prend en compte les Ã©lÃ©ments variables (paniers, congÃ©s, primes) du 15/08 au 11/09/2026. Â»</p>
-      <p class="notice-note" data-i18n="noticeNote">ð Traduction fidÃ¨le du message original â les dates restent au format jour/mois/annÃ©e.</p>
+      <p data-i18n="noticeP1">« Pour information, les documents et virements des paies de la première quinzaine du mois sont envoyés en fin de mois.</p>
+      <p data-i18n="noticeP2">Pour le mois de septembre : virement émis par RGIS le <b>30/09/2026</b> (contrats terminant entre le 01 et le 11/09/2026, ou se poursuivant en octobre). Envoi des documents 24–48 h après.</p>
+      <p data-i18n="noticeP3">Les documents et virements des paies de la deuxième quinzaine du mois sont envoyés en « milieu » de mois suivant.</p>
+      <p data-i18n="noticeP4">Pour le mois de septembre : virement émis par RGIS le <b>12/10/2026</b> (contrats terminant entre le 12 et le 30/09/2026). Envoi des documents 24–48 h après.</p>
+      <p data-i18n="noticeP5">La paie de septembre prend en compte les éléments variables (paniers, congés, primes) du 15/08 au 11/09/2026. »</p>
+      <p class="notice-note" data-i18n="noticeNote">📌 Traduction fidèle du message original — les dates restent au format jour/mois/année.</p>
     </div>
   </div>
 
   <div class="stats">
-    <div class="stat acc"><div class="lab" data-i18n="stHours">Heures totales</div><div class="val" id="stHours">â</div><div class="sub" id="stMissions"></div></div>
-    <div class="stat"><div class="lab" data-i18n="stGross">Brut + prÃ©caritÃ©</div><div class="val" id="stGross">â</div><div class="sub" id="stGrossSub"></div></div>
-    <div class="stat gold"><div class="lab" data-i18n="stNet">Net estimÃ©</div><div class="val" id="stNet">â</div><div class="sub" id="stNetSub"></div></div>
+    <div class="stat acc"><div class="lab" data-i18n="stHours">Heures totales</div><div class="val" id="stHours">—</div><div class="sub" id="stMissions"></div></div>
+    <div class="stat"><div class="lab" data-i18n="stGross">Brut + précarité</div><div class="val" id="stGross">—</div><div class="sub" id="stGrossSub"></div></div>
+    <div class="stat gold"><div class="lab" data-i18n="stNet">Net estimé</div><div class="val" id="stNet">—</div><div class="sub" id="stNetSub"></div></div>
     <div class="stat acc"><div class="lab" data-i18n="stNext">Prochain virement</div><div class="val" style="font-size:1.15rem" id="stNext">12/10/2026</div><div class="sub" data-i18n="stNextSub">Missions de septembre</div></div>
   </div>
 
   <section>
     <div class="card">
       <h2><span class="n">1</span><span data-i18n="s1Title">Le simulateur</span></h2>
-      <p class="desc" data-i18n="s1Desc">Les valeurs de ton contrat sont prÃ©-remplies. Ajuste la majoration de nuit quand tu connaÃ®tras le taux de l'accord d'entreprise.</p>
+      <p class="desc" data-i18n="s1Desc">Les valeurs de ton contrat sont pré-remplies. Ajuste la majoration de nuit quand tu connaîtras le taux de l'accord d'entreprise.</p>
       <div class="controls">
-        <div class="ctl"><label data-i18n="cRate">Taux horaire brut (â¬)</label><input type="number" id="inRate" value="12.31" step="0.01" min="0"></div>
+        <div class="ctl"><label data-i18n="cRate">Taux horaire brut (€)</label><input type="number" id="inRate" value="12.31" step="0.01" min="0"></div>
         <div class="ctl"><label data-i18n="cNight">Majoration nuit (%)</label><input type="number" id="inNight" value="0" step="1" min="0" max="100"></div>
-        <div class="ctl"><label data-i18n="cPrec">IndemnitÃ© de prÃ©caritÃ© (%)</label><input type="number" id="inPrec" value="4" step="0.5" min="0" max="20"></div>
-        <div class="ctl"><label data-i18n="cNetPct">Net aprÃ¨s cotisations (%)</label><input type="number" id="inNetPct" value="78" step="1" min="50" max="100"></div>
+        <div class="ctl"><label data-i18n="cPrec">Indemnité de précarité (%)</label><input type="number" id="inPrec" value="4" step="0.5" min="0" max="20"></div>
+        <div class="ctl"><label data-i18n="cNetPct">Net après cotisations (%)</label><input type="number" id="inNetPct" value="78" step="1" min="50" max="100"></div>
       </div>
       <div class="splitbar">
         <div id="sbNet" style="background:#0d7a68">Net</div>
         <div id="sbCot" style="background:#b8860b">Cotisations</div>
       </div>
       <div class="legend">
-        <span><i style="background:#0d7a68"></i><span data-i18n="lgNet">Net estimÃ© (avant impÃ´t)</span> â <b id="lgNetV"></b></span>
-        <span><i style="background:#b8860b"></i><span data-i18n="lgCot">Cotisations salariales</span> â <b id="lgCotV"></b></span>
+        <span><i style="background:#0d7a68"></i><span data-i18n="lgNet">Net estimé (avant impôt)</span> — <b id="lgNetV"></b></span>
+        <span><i style="background:#b8860b"></i><span data-i18n="lgCot">Cotisations salariales</span> — <b id="lgCotV"></b></span>
       </div>
     </div>
   </section>
@@ -216,7 +216,7 @@
   <section>
     <div class="card">
       <h2><span class="n">2</span><span data-i18n="s2Title">Mes missions</span></h2>
-      <p class="desc" data-i18n="s2Desc">Toutes tes missions sont dÃ©jÃ  saisies et vÃ©rifiÃ©es d'aprÃ¨s tes captures d'Ã©cran. La lune ð = mission de nuit (majoration auto). Clique une valeur pour la corriger, ou ajoute une mission.</p>
+      <p class="desc" data-i18n="s2Desc">Toutes tes missions sont déjà saisies et vérifiées d'après tes captures d'écran. La lune 🌙 = mission de nuit (majoration auto). Clique une valeur pour la corriger, ou ajoute une mission.</p>
       <div style="overflow-x:auto">
       <table id="tbl">
         <thead><tr>
@@ -227,12 +227,12 @@
         <tbody id="tbody"></tbody>
         <tfoot><tr>
           <td colspan="3" data-i18n="ftTotal">Total</td>
-          <td id="ftHours">â</td><td colspan="2" id="ftGross"></td>
+          <td id="ftHours">—</td><td colspan="2" id="ftGross"></td>
         </tr></tfoot>
       </table>
       </div>
       <div class="mini-actions">
-        <button class="btn primary" id="btnAdd" data-i18n="addMission">ï¼ Ajouter une mission</button>
+        <button class="btn primary" id="btnAdd" data-i18n="addMission">＋ Ajouter une mission</button>
       </div>
     </div>
   </section>
@@ -240,7 +240,7 @@
   <section>
     <div class="card">
       <h2><span class="n">3</span><span data-i18n="s3Title">Graphiques</span></h2>
-      <p class="desc" data-i18n="s3Desc">Heures par mission (vert = payÃ© le 12/10, dorÃ© = payÃ© fin octobre).</p>
+      <p class="desc" data-i18n="s3Desc">Heures par mission (vert = payé le 12/10, doré = payé fin octobre).</p>
       <div class="chart-bars" id="chart"></div>
     </div>
   </section>
@@ -248,39 +248,39 @@
   <section>
     <div class="card">
       <h2><span class="n">4</span><span data-i18n="s4Title">Mes virements</span></h2>
-      <p class="desc" data-i18n="s4Desc">Un CDD d'usage = un contrat par mission. La date de virement dÃ©pend de la date de fin de chaque contrat.</p>
+      <p class="desc" data-i18n="s4Desc">Un CDD d'usage = un contrat par mission. La date de virement dépend de la date de fin de chaque contrat.</p>
       <div class="pays">
         <div class="pay">
-          <div class="when">ð¸ 12/10/2026<span class="pill" data-i18n="pillSept">Missions de sept.</span></div>
+          <div class="when">💸 12/10/2026<span class="pill" data-i18n="pillSept">Missions de sept.</span></div>
           <div id="pay1"></div>
         </div>
         <div class="pay ghost">
-          <div class="when">ð° ~30/10/2026<span class="pill" data-i18n="pillOct">Missions d'oct.</span></div>
+          <div class="when">💰 ~30/10/2026<span class="pill" data-i18n="pillOct">Missions d'oct.</span></div>
           <div id="pay2"></div>
-          <div class="note" data-i18n="pay2Note">Date dÃ©duite du rythme de septembre â non confirmÃ©e par le message officiel.</div>
+          <div class="note" data-i18n="pay2Note">Date déduite du rythme de septembre — non confirmée par le message officiel.</div>
         </div>
       </div>
       <details>
-        <summary data-i18n="msgTitle">ð Relire le message officiel RGIS</summary>
-        <blockquote data-i18n="msgBody">Communication du 23/09/2026 â Rythme de paie de septembre 2026 : les paies de la premiÃ¨re quinzaine sont envoyÃ©es en fin de mois (virement RGIS le 30/09/2026 pour les contrats terminÃ©s entre le 01 et le 11/09, ou se poursuivant en octobre). Les paies de la deuxiÃ¨me quinzaine sont envoyÃ©es en milieu de mois suivant (virement le 12/10/2026 pour les contrats terminÃ©s entre le 12 et le 30/09). Les Ã©lÃ©ments variables (paniers, congÃ©s, primes) sont comptÃ©s du 15/08 au 11/09.</blockquote>
-        <p class="note" data-i18n="msgNote">Le message complet est aussi affichÃ© en notice en haut de page.</p>
+        <summary data-i18n="msgTitle">📄 Relire le message officiel RGIS</summary>
+        <blockquote data-i18n="msgBody">Communication du 23/09/2026 — Rythme de paie de septembre 2026 : les paies de la première quinzaine sont envoyées en fin de mois (virement RGIS le 30/09/2026 pour les contrats terminés entre le 01 et le 11/09, ou se poursuivant en octobre). Les paies de la deuxième quinzaine sont envoyées en milieu de mois suivant (virement le 12/10/2026 pour les contrats terminés entre le 12 et le 30/09). Les éléments variables (paniers, congés, primes) sont comptés du 15/08 au 11/09.</blockquote>
+        <p class="note" data-i18n="msgNote">Le message complet est aussi affiché en notice en haut de page.</p>
       </details>
-      <div class="warn" data-i18n="s4Warn">â ï¸ Les montants sont des estimations. Seule la fiche de paie fait foi â vÃ©rifie que les heures de chaque mission y figurent bien.</div>
+      <div class="warn" data-i18n="s4Warn">⚠️ Les montants sont des estimations. Seule la fiche de paie fait foi — vérifie que les heures de chaque mission y figurent bien.</div>
     </div>
   </section>
 
   <section>
     <div class="card">
-      <h2><span class="n">5</span><span data-i18n="s5Title">Brut, netâ¦ c'est quoi la diffÃ©rence ?</span></h2>
-      <p class="desc" data-i18n="s5Desc">Pourquoi le contrat annonce 12,31 â¬ et pas ce qui arrive sur ton compte.</p>
+      <h2><span class="n">5</span><span data-i18n="s5Title">Brut, net… c'est quoi la différence ?</span></h2>
+      <p class="desc" data-i18n="s5Desc">Pourquoi le contrat annonce 12,31 € et pas ce qui arrive sur ton compte.</p>
       <table>
-        <thead><tr><th data-i18n="thItem">ÃlÃ©ment</th><th data-i18n="thEx">Explication</th></tr></thead>
+        <thead><tr><th data-i18n="thItem">Élément</th><th data-i18n="thEx">Explication</th></tr></thead>
         <tbody>
-          <tr><td><b data-i18n="rowBrut">Brut</b></td><td data-i18n="rowBrutX">Le montant du contrat, avant dÃ©ductions. C'est la base des majorations de nuit et de l'indemnitÃ© de prÃ©caritÃ©.</td></tr>
-          <tr><td><b data-i18n="rowCot">Cotisations salariales</b></td><td data-i18n="rowCotX">â 21â23% du brut pour un non-cadre : retraite, CSG/CRDS, assurance maladieâ¦ retenues sur ta paie.</td></tr>
-          <tr><td><b data-i18n="rowNet">Net avant impÃ´t</b></td><td data-i18n="rowNetX">Le brut moins les cotisations : environ 77â79% du brut. C'est le Â« net Ã  payer Â» de la fiche de paie.</td></tr>
-          <tr><td><b data-i18n="rowPrec">PrÃ©caritÃ© 4%</b></td><td data-i18n="rowPrecX">VersÃ©e Ã  la fin du contrat (article 53, convention Syntec-CICF). Soumise Ã  cotisations, donc son net est plus faible.</td></tr>
-          <tr><td><b data-i18n="rowTax">ImpÃ´t</b></td><td data-i18n="rowTaxX">PrÃ©levÃ© Ã  la source selon ton taux personnalisÃ©, aprÃ¨s le net avant impÃ´t.</td></tr>
+          <tr><td><b data-i18n="rowBrut">Brut</b></td><td data-i18n="rowBrutX">Le montant du contrat, avant déductions. C'est la base des majorations de nuit et de l'indemnité de précarité.</td></tr>
+          <tr><td><b data-i18n="rowCot">Cotisations salariales</b></td><td data-i18n="rowCotX">≈ 21–23% du brut pour un non-cadre : retraite, CSG/CRDS, assurance maladie… retenues sur ta paie.</td></tr>
+          <tr><td><b data-i18n="rowNet">Net avant impôt</b></td><td data-i18n="rowNetX">Le brut moins les cotisations : environ 77–79% du brut. C'est le « net à payer » de la fiche de paie.</td></tr>
+          <tr><td><b data-i18n="rowPrec">Précarité 4%</b></td><td data-i18n="rowPrecX">Versée à la fin du contrat (article 53, convention Syntec-CICF). Soumise à cotisations, donc son net est plus faible.</td></tr>
+          <tr><td><b data-i18n="rowTax">Impôt</b></td><td data-i18n="rowTaxX">Prélevé à la source selon ton taux personnalisé, après le net avant impôt.</td></tr>
         </tbody>
       </table>
     </div>
@@ -290,8 +290,8 @@
 
 <footer class="botbar"><div class="botbar-in">
   <span>RGIS</span>
-  <span>Â·</span><span>v1.0.0</span>
-  <span>Â·</span><span data-i18n="botNote">Estimations non contractuelles</span>
+  <span>·</span><span>v1.0.0</span>
+  <span>·</span><span data-i18n="botNote">Estimations non contractuelles</span>
 </div></footer>
 
 <script>
@@ -299,36 +299,36 @@
 const I18N = {
   en: {
     brand:"My hours & pay", heroTitle:"My RGIS hours & pay estimator",
-    heroSub:"CDD d'usage Â· â¬12.31 gross/h Â· 4% precarity allowance. Change anything you like: totals, charts and transfers recalculate live.",
-    noticeTitle:"The official RGIS message â September 2026 pay schedule",
-    noticeDate:"Communication of 23/09/2026 Â· 09:36 Â· translated from French",
-    noticeBtn:"â ï¸ Important â read me",
+    heroSub:"CDD d'usage · €12.31 gross/h · 4% precarity allowance. Change anything you like: totals, charts and transfers recalculate live.",
+    noticeTitle:"The official RGIS message — September 2026 pay schedule",
+    noticeDate:"Communication of 23/09/2026 · 09:36 · translated from French",
+    noticeBtn:"⚠️ Important — read me",
     noticeP1:"\"For your information, the payslips and bank transfers for the first half of the month are sent at the end of the month.",
-    noticeP2:"For September: transfer issued by RGIS on <b>30/09/2026</b> (contracts ending between 01 and 11/09/2026, or continuing into October). Documents are sent 24â48 hours later.",
+    noticeP2:"For September: transfer issued by RGIS on <b>30/09/2026</b> (contracts ending between 01 and 11/09/2026, or continuing into October). Documents are sent 24–48 hours later.",
     noticeP3:"The payslips and bank transfers for the second half of the month are sent in the \"middle\" of the following month.",
-    noticeP4:"For September: transfer issued by RGIS on <b>12/10/2026</b> (contracts ending between 12 and 30/09/2026). Documents are sent 24â48 hours later.",
+    noticeP4:"For September: transfer issued by RGIS on <b>12/10/2026</b> (contracts ending between 12 and 30/09/2026). Documents are sent 24–48 hours later.",
     noticeP5:"September pay takes into account variable items (meal allowances, leave, bonuses) from 15/08 to 11/09/2026.\"",
-    noticeNote:"ð Faithful translation of the original message â dates stay in day/month/year format.",
+    noticeNote:"📌 Faithful translation of the original message — dates stay in day/month/year format.",
     stHours:"Total hours", stGross:"Gross + allowance", stNet:"Estimated net", stNext:"Next transfer", stNextSub:"September missions",
     s1Title:"The simulator", s1Desc:"Your contract values are pre-filled. Adjust the night premium once you know the company agreement rate.",
-    cRate:"Gross hourly rate (â¬)", cNight:"Night premium (%)", cPrec:"Precarity allowance (%)", cNetPct:"Net after contributions (%)",
+    cRate:"Gross hourly rate (€)", cNight:"Night premium (%)", cPrec:"Precarity allowance (%)", cNetPct:"Net after contributions (%)",
     lgNet:"Estimated net (before tax)", lgCot:"Employee contributions",
-    s2Title:"My missions", s2Desc:"All your missions are already entered and verified from your screenshots. The moon ð = night mission (premium applied automatically). Click a value to correct it, or add a mission.",
+    s2Title:"My missions", s2Desc:"All your missions are already entered and verified from your screenshots. The moon 🌙 = night mission (premium applied automatically). Click a value to correct it, or add a mission.",
     thDate:"Date", thPlace:"Place", thTime:"Times", thHours:"Hours", thNight:"Night", thChecked:"Status", ftTotal:"Total",
-    verified:"verified", addMission:"ï¼ Add a mission",
+    verified:"verified", addMission:"＋ Add a mission",
     s3Title:"Charts", s3Desc:"Hours per mission (green = paid Oct 12, gold = paid end of October).",
     s4Title:"My transfers", s4Desc:"One CDD d'usage = one contract per mission. The transfer date depends on each contract's end date.",
     pillSept:"Sept. missions", pillOct:"Oct. missions",
-    pay2Note:"Date inferred from the September rhythm â not confirmed by the official message.",
-    msgTitle:"ð Re-read the official RGIS message",
-    msgBody:"Communication of 23/09/2026 â September 2026 pay schedule: first-half payslips are sent at the end of the month (RGIS transfer on 30/09/2026 for contracts ended between Sep 1â11, or continuing into October). Second-half payslips are sent mid-following-month (transfer on 12/10/2026 for contracts ended between Sep 12â30). Variable items (meal allowances, leave, bonuses) are counted from Aug 15 to Sep 11.",
+    pay2Note:"Date inferred from the September rhythm — not confirmed by the official message.",
+    msgTitle:"📄 Re-read the official RGIS message",
+    msgBody:"Communication of 23/09/2026 — September 2026 pay schedule: first-half payslips are sent at the end of the month (RGIS transfer on 30/09/2026 for contracts ended between Sep 1–11, or continuing into October). Second-half payslips are sent mid-following-month (transfer on 12/10/2026 for contracts ended between Sep 12–30). Variable items (meal allowances, leave, bonuses) are counted from Aug 15 to Sep 11.",
     msgNote:"The full message is also shown in the notice card at the top of the page.",
-    s4Warn:"â ï¸ All amounts are estimates. Only the payslip is definitive â check each mission's hours appear on it.",
-    s5Title:"Gross, netâ¦ what's the difference?", s5Desc:"Why the contract says â¬12.31 and not what lands in your account.",
+    s4Warn:"⚠️ All amounts are estimates. Only the payslip is definitive — check each mission's hours appear on it.",
+    s5Title:"Gross, net… what's the difference?", s5Desc:"Why the contract says €12.31 and not what lands in your account.",
     thItem:"Item", thEx:"Explanation",
     rowBrut:"Gross", rowBrutX:"The contract amount, before deductions. It's the base for night premiums and the precarity allowance.",
-    rowCot:"Employee contributions", rowCotX:"â 21â23% of gross for a non-executive: pension, CSG/CRDS, health insuranceâ¦ withheld from your pay.",
-    rowNet:"Net before tax", rowNetX:"Gross minus contributions: about 77â79% of gross. It's the \"net Ã  payer\" on the payslip.",
+    rowCot:"Employee contributions", rowCotX:"≈ 21–23% of gross for a non-executive: pension, CSG/CRDS, health insurance… withheld from your pay.",
+    rowNet:"Net before tax", rowNetX:"Gross minus contributions: about 77–79% of gross. It's the \"net à payer\" on the payslip.",
     rowPrec:"4% precarity", rowPrecX:"Paid at the end of the contract (Article 53, Syntec-CICF collective agreement). It's taxed too, so its net is lower.",
     rowTax:"Income tax", rowTaxX:"Withheld at source at your personal rate, after the net before tax.",
     botMade:"made with", botNote:"Non-contractual estimates",
@@ -342,18 +342,18 @@ const t = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
 
 /* ---------------- data ---------------- */
 let missions = [
-  { date:"22/09", place:"Formation (902 Training)", time:"20:09â20:17", h:0.13, night:false, month:"sep" },
-  { date:"22/09", place:"Paimpol Â· Carrefour Hyper", time:"20:17â01:02", h:4.75, night:true,  month:"sep" },
-  { date:"28/09", place:"Paraph Landerneau Â· Leclerc", time:"19:08â20:39", h:1.52, night:false, month:"sep" },
-  { date:"28/09", place:"Hyper Landerneau Â· Leclerc", time:"20:51â01:39", h:4.80, night:true,  month:"sep" },
-  { date:"01/10", place:"QuÃ©ven Â· Leclerc", time:"20:11â02:04", h:5.88, night:true,  month:"oct" },
-  { date:"02/10", place:"Fouesnant Â· Carrefour Market", time:"19:07â23:17", h:4.17, night:false, month:"oct" }
+  { date:"22/09", place:"Formation (902 Training)", time:"20:09–20:17", h:0.13, night:false, month:"sep" },
+  { date:"22/09", place:"Paimpol · Carrefour Hyper", time:"20:17–01:02", h:4.75, night:true,  month:"sep" },
+  { date:"28/09", place:"Paraph Landerneau · Leclerc", time:"19:08–20:39", h:1.52, night:false, month:"sep" },
+  { date:"28/09", place:"Hyper Landerneau · Leclerc", time:"20:51–01:39", h:4.80, night:true,  month:"sep" },
+  { date:"01/10", place:"Quéven · Leclerc", time:"20:11–02:04", h:5.88, night:true,  month:"oct" },
+  { date:"02/10", place:"Fouesnant · Carrefour Market", time:"19:07–23:17", h:4.17, night:false, month:"oct" }
 ];
 
 /* ---------------- helpers ---------------- */
 const $ = id => document.getElementById(id);
 const fmt = (n, d=2) => n.toLocaleString(LANG==='fr'?'fr-FR':'en-GB',{minimumFractionDigits:d,maximumFractionDigits:d});
-const money = n => (LANG==='fr'?'':'â¬') + fmt(n) + (LANG==='fr'?' â¬':'');
+const money = n => (LANG==='fr'?'':'€') + fmt(n) + (LANG==='fr'?' €':'');
 
 function params(){
   return {
@@ -367,10 +367,10 @@ function missionGross(m,p){ return m.h * p.rate * (m.night ? 1+p.night : 1); }
 
 /* auto night detection: mission counts as night if it starts after 19:00 or ends after 21:00 / past midnight */
 function isNight(m){
-  const times = (m.time||'').match(/(\d{1,2}):(\d{2})\s*[â-]\s*(\d{1,2}):(\d{2})/);
+  const times = (m.time||'').match(/(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})/);
   if(!times) return m.night === true;
   const sh = +times[1], eh = +times[3];
-  return sh >= 19 || eh >= 21 || eh <= 6; // end 00:00â06:00 = past midnight
+  return sh >= 19 || eh >= 21 || eh <= 6; // end 00:00–06:00 = past midnight
 }
 
 /* ---------------- render table ---------------- */
@@ -384,9 +384,9 @@ function renderTable(){
       <td><input value="${m.place}" data-i="${i}" data-f="place"></td>
       <td><input value="${m.time}" data-i="${i}" data-f="time" style="width:110px"></td>
       <td><input value="${m.h}" data-i="${i}" data-f="h" type="number" step="0.01" min="0" style="width:80px"></td>
-      <td>${m.night ? 'ð' : 'â'}</td>
-      <td class="ok">â ${LANG==='fr' ? 'vÃ©rifiÃ©e' : 'verified'}</td>
-      <td><button class="del" data-i="${i}" title="â">â</button></td>`;
+      <td>${m.night ? '🌙' : '—'}</td>
+      <td class="ok">✓ ${LANG==='fr' ? 'vérifiée' : 'verified'}</td>
+      <td><button class="del" data-i="${i}" title="✕">✕</button></td>`;
     tb.appendChild(tr);
   });
 }
@@ -434,7 +434,7 @@ function recalc(){
   missions.forEach(m=>{
     const col = document.createElement('div'); col.className='bar-col';
     col.innerHTML = `<div class="bar ${m.month==='oct'?'gold':''}" style="height:${Math.max(3,(m.h/maxH)*150)}px"></div>
-      <div class="bar-val">${fmt(m.h)}</div><div class="bar-lab">${m.date}<br>${m.place.split('Â·')[0]}</div>`;
+      <div class="bar-val">${fmt(m.h)}</div><div class="bar-lab">${m.date}<br>${m.place.split('·')[0]}</div>`;
     chart.appendChild(col);
   });
 }
@@ -461,7 +461,7 @@ $('btnAdd').addEventListener('click', ()=>{
 $('btnTheme').addEventListener('click', ()=>{
   const night = document.body.classList.toggle('night');
   document.body.classList.toggle('day', !night);
-  $('btnTheme').textContent = night ? 'âï¸' : 'ð';
+  $('btnTheme').textContent = night ? '☀️' : '🌙';
 });
 /* language */
 function applyLang(){
@@ -482,7 +482,7 @@ function applyLang(){
 /* notice toggle */
 $('btnNotice').addEventListener('click', ()=>{
   const open = $('noticeCard').classList.toggle('open');
-  $('btnNotice').textContent = open ? (LANG==='fr'?'â Lu â refermer':'â Read â close') : t('noticeBtn');
+  $('btnNotice').textContent = open ? (LANG==='fr'?'✓ Lu — refermer':'✓ Read — close') : t('noticeBtn');
 });
 function setLang(l){
   if(l===LANG) return;
