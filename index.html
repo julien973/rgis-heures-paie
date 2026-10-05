@@ -188,7 +188,7 @@
   <div class="hero">
     <h1 data-i18n="heroTitle">Heures RGIS &amp; estimateur de paie — Julien (Shenn)</h1>
     <div class="hero-bar"></div>
-    <p data-i18n="heroSub">Enquêteur vacataire chez RGIS (inventaires) · CDD d'usage · 12,31 € brut/h · précarité 4% + congés payés 10%. Toutes les heures affichées ont été travaillées et vérifiées d'après les captures d'application.</p>
+    <p data-i18n="heroSub">Enquêteur vacataire chez RGIS (inventaires) · CDD d'usage (contrat temporaire d'usage, pour des missions ponctuelles terminées le jour même) · 12,31 € brut/h · précarité 4% + congés payés 10%. Toutes les heures affichées ont été travaillées et vérifiées d'après les captures d'application.</p>
   </div>
 
   <div class="notice" id="noticeCard">
@@ -277,8 +277,8 @@
   <section>
     <div class="card">
       <h2><span class="n">4</span><span data-i18n="s4Title">Les virements</span></h2>
-      <p class="desc" data-i18n="s4Desc">Un CDD d'usage = un contrat par mission. La date de virement dépend de la date de fin de chaque contrat.</p>
-      <div class="callout info"><span class="ic">ℹ️</span><div data-i18n="coPay">Pourquoi <b class="hl">deux virements</b> ? Parce qu'un CDD d'usage (contrat de mission d'astreinte pour l'inventaire) commence et finit <b class="hl">le jour même de chaque mission</b>. RGIS paie tous les contrats terminés entre le 12 et le 30/09 <b class="hl">le 12/10</b>, et ceux terminés début octobre <b class="hl">vers le 30/10</b>. Les missions de septembre et d'octobre ne tombent donc pas dans le même virement.</div></div>
+      <p class="desc" data-i18n="s4Desc">Un CDD d'usage (contrat temporaire d'usage, pour des missions ponctuelles terminées le jour même) = un contrat par mission. La date de virement dépend de la date de fin de chaque contrat.</p>
+      <div class="callout info"><span class="ic">ℹ️</span><div data-i18n="coPay">Pourquoi <b class="hl">deux virements</b> ? Parce qu'un CDD d'usage — un type de contrat temporaire autorisé en France pour les jobs ponctuels comme l'inventaire — commence et finit <b class="hl">le jour même de chaque mission</b>. RGIS paie tous les contrats terminés entre le 12 et le 30/09 <b class="hl">le 12/10</b>, et ceux terminés début octobre <b class="hl">vers le 30/10</b>. Les missions de septembre et d'octobre ne tombent donc pas dans le même virement.</div></div>
       <div class="pays">
         <div class="pay">
           <div class="when">💸 12/10/2026<span class="pill" data-i18n="pillSept">Missions de sept.</span></div>
@@ -321,7 +321,7 @@
 
 <footer class="botbar"><div class="botbar-in">
   <span>RGIS</span>
-  <span>·</span><span>v1.4.2</span>
+  <span>·</span><span>v1.4.3</span>
   <span>·</span><span data-i18n="botNote">Estimations non contractuelles</span>
 </div></footer>
 
@@ -330,7 +330,7 @@
 const I18N = {
   en: {
     brand:"Julien (Shenn)'s hours & pay", heroTitle:"RGIS hours & pay estimator — Julien (Shenn)",
-    heroSub:"Inventory auditor at RGIS · CDD d'usage · €12.31 gross/h · 4% precarity + 10% paid leave. All hours shown have been worked and verified from app screenshots.",
+    heroSub:"Inventory auditor at RGIS · CDD d'usage (a French fixed-term contract for occasional, same-day missions) · €12.31 gross/h · 4% precarity + 10% paid leave. All hours shown have been worked and verified from app screenshots.",
     noticeTitle:"The official RGIS message — September 2026 pay schedule",
     noticeDate:"Communication of 23/09/2026 · 09:36 · translated from French",
     noticeBtn:"⚠️ Important — read me",
@@ -342,7 +342,7 @@ const I18N = {
     noticeNote:"📌 Faithful translation of the original message — dates stay in day/month/year format.",
     coSim:"The <b class=\"hl\">pre-filled values come from Julien's contract</b> (Articles 4 and 6): <b class=\"hl\">€12.31/h</b> gross, <b class=\"hl\">4%</b> precarity (Art. 4) and <b class=\"hl\">10% paid leave</b> (Art. 6) — both are added to the pay. The only free setting: the <b class=\"hl\">night premium</b> — the contract says one exists (company agreement), but the exact rate isn't written in it.",
     coTbl:"The moon <b class=\"hl\">🌙</b> indicates a mission counted as <b class=\"hl\">night work</b>: it ends after 9 PM or past midnight. Those hours are paid <b class=\"hl\">more</b> — the estimator applies the premium automatically. The <b class=\"hl\">✓ verified</b> means the figures come from the RGIS app screenshots, not an estimate.",
-    coPay:"Why <b class=\"hl\">two transfers</b>? Because a CDD d'usage (on-call inventory contract) starts and ends <b class=\"hl\">on the day of each mission</b>. RGIS pays all contracts ended between Sep 12–30 <b class=\"hl\">on Oct 12</b>, and the early-October ones <b class=\"hl\">around Oct 30</b>. So September and October missions don't land in the same transfer.",
+    coPay:"Why <b class=\"hl\">two transfers</b>? Because a CDD d'usage — in France, a type of fixed-term contract allowed for occasional jobs like inventory counting — starts and ends <b class=\"hl\">on the day of each mission</b>. RGIS pays all contracts ended between Sep 12–30 <b class=\"hl\">on Oct 12</b>, and the early-October ones <b class=\"hl\">around Oct 30</b>. So September and October missions don't land in the same transfer.",
     coNet:"Honestly, gross → net is simple: <b class=\"hl\">gross is the price of the work</b> written in the contract. <b class=\"hl\">Net is what lands in the bank account</b> after the State takes its share (pension, health…). The contract always speaks in gross because <b class=\"hl\">net varies with each person's situation</b> — the employer can't promise it in advance.",
     stHours:"Total hours", stGross:"Gross + bonuses", stNet:"Estimated net", stNext:"Next transfer", stNextSub:"September missions",
     s1Title:"The estimator", s1Desc:"Values are those of Julien's contract. The night premium is adjustable: its exact rate is set by the company agreement, not included in the contract.",
@@ -353,7 +353,7 @@ const I18N = {
     thDate:"Date", thPlace:"Place", thTime:"Times", thHours:"Hours", thNight:"Night", thChecked:"Status", ftTotal:"Total",
     verified:"verified",
     s3Title:"Charts", s3Desc:"Hours per mission (green = paid Oct 12, gold = paid end of October).",
-    s4Title:"The transfers", s4Desc:"One CDD d'usage = one contract per mission. The transfer date depends on each contract's end date.",
+    s4Title:"The transfers", s4Desc:"One CDD d'usage (French fixed-term contract used for occasional, same-day missions) = one contract per mission. The transfer date depends on each contract's end date.",
     pillSept:"Sept. missions", pillOct:"Oct. missions",
     pay2Note:"Date inferred from the September rhythm — not confirmed by the official message.",
     msgTitle:"📄 Re-read the official RGIS message",
