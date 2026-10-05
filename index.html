@@ -84,8 +84,14 @@
   /* hero */
   .hero{margin:34px 0 8px}
   .hero h1{font-size:clamp(1.6rem,4.5vw,2.5rem);margin:.1em 0;background:var(--hero-bar);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
-  .hero p{color:var(--muted);margin:.2em 0 0;max-width:640px}
   .hero-bar{height:4px;border-radius:99px;background:var(--hero-bar);max-width:340px;margin:16px 0 0}
+  /* profile card — distincte des autres cartes, fond transparent */
+  .profile{margin:20px 0 0;padding:16px 18px;border:1.5px dashed var(--border-strong);border-radius:var(--radius);background:transparent;position:relative;display:flex;gap:13px;align-items:flex-start;max-width:760px}
+  .profile .p-ic{flex-shrink:0;width:38px;height:38px;border-radius:11px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:1.15rem;border:1px solid var(--accent)}
+  .profile .p-txt{color:var(--ink);font-size:.88rem;line-height:1.65;margin:0}
+  .profile .p-txt b{color:var(--accent-ink);font-weight:800}
+  .profile .p-tag{position:absolute;top:-10px;left:14px;background:var(--accent);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:2px 10px;border-radius:999px}
+  body.night .profile .p-tag{color:#06231e}
   /* stats */
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:26px 0}
   .stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow-sm)}
@@ -192,7 +198,12 @@
   <div class="hero">
     <h1 data-i18n="heroTitle">Heures RGIS &amp; estimateur de paie — Julien (Shenn)</h1>
     <div class="hero-bar"></div>
-    <p data-i18n="heroSub">Enquêteur vacataire chez RGIS (inventaires) · CDD d'usage (contrat temporaire d'usage, pour des missions ponctuelles terminées le jour même) · 12,31 € brut/h · précarité 4% + congés payés 10%. Toutes les heures affichées ont été réellement travaillées.</p>
+  </div>
+
+  <div class="profile">
+    <span class="p-tag" data-i18n="profTag">Profil</span>
+    <div class="p-ic">🧾</div>
+    <p class="p-txt" data-i18n="heroSub">Enquêteur vacataire chez RGIS (inventaires) · CDD d'usage (contrat temporaire d'usage, pour des missions ponctuelles terminées le jour même) · 12,31 € brut/h · précarité 4% + congés payés 10%. Toutes les heures affichées ont été réellement travaillées.</p>
   </div>
 
   <div class="notice" id="noticeCard">
@@ -325,7 +336,7 @@
 
 <footer class="botbar"><div class="botbar-in">
   <span>RGIS</span>
-  <span>·</span><span>v1.4.6</span>
+  <span>·</span><span>v1.4.7</span>
   <span>·</span><span data-i18n="botNote">Estimations non contractuelles</span>
 </div></footer>
 
@@ -335,6 +346,7 @@ const I18N = {
   en: {
     brand:"Julien (Shenn)'s hours & pay", heroTitle:"RGIS hours & pay estimator — Julien (Shenn)",
     heroSub:"Inventory auditor at RGIS · CDD d'usage (a French fixed-term contract for occasional, same-day missions) · €12.31 gross/h · 4% precarity + 10% paid leave. All hours shown have been actually worked.",
+    profTag:"Profile",
     noticeTitle:"The official RGIS message — September 2026 pay schedule",
     noticeDate:"Communication of 23/09/2026 · 09:36 · translated from French",
     noticeBtn:"Important — read the official message",
