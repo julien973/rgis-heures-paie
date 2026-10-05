@@ -212,7 +212,7 @@
 
   <div class="stats">
     <div class="stat acc"><div class="lab" data-i18n="stHours">Heures totales</div><div class="val" id="stHours">—</div><div class="sub" id="stMissions"></div></div>
-    <div class="stat"><div class="lab" data-i18n="stGross">Brut + précarité</div><div class="val" id="stGross">—</div><div class="sub" id="stGrossSub"></div></div>
+    <div class="stat"><div class="lab" data-i18n="stGross">Brut + primes</div><div class="val" id="stGross">—</div><div class="sub" id="stGrossSub"></div></div>
     <div class="stat gold"><div class="lab" data-i18n="stNet">Net estimé</div><div class="val" id="stNet">—</div><div class="sub" id="stNetSub"></div></div>
     <div class="stat acc"><div class="lab" data-i18n="stNext">Prochain virement</div><div class="val" style="font-size:1.15rem" id="stNext">12/10/2026</div><div class="sub" data-i18n="stNextSub">Missions de septembre</div></div>
   </div>
@@ -221,11 +221,12 @@
     <div class="card">
       <h2><span class="n">1</span><span data-i18n="s1Title">Le simulateur</span></h2>
       <p class="desc" data-i18n="s1Desc">Les valeurs de ton contrat sont pré-remplies. Ajuste la majoration de nuit quand tu connaîtras le taux de l'accord d'entreprise.</p>
-      <div class="callout info"><span class="ic">ℹ️</span><div data-i18n="coSim">Les valeurs <b class="hl">pré-remplies viennent de ton contrat</b> (l'article 4 « Rémunération »). Tu n'as pas besoin d'y toucher : <b class="hl">12,31 €/h</b> c'est ton brut horaire, <b class="hl">4%</b> c'est la prime de fin de contrat. Le seul réglage utile pour toi : la <b class="hl">majoration de nuit</b> — ton contrat dit qu'elle existe (accord d'entreprise), mais le taux exact n'est pas écrit dedans.</div></div>
+      <div class="callout info"><span class="ic">ℹ️</span><div data-i18n="coSim">Les valeurs <b class="hl">pré-remplies viennent de ton contrat</b> (articles 4 et 6) : <b class="hl">12,31 €/h</b> brut, <b class="hl">4%</b> de précarité (art. 4) et <b class="hl">10% de congés payés</b> (art. 6) — les deux s'ajoutent à ta paie. Le seul réglage utile : la <b class="hl">majoration de nuit</b> — ton contrat dit qu'elle existe (accord d'entreprise), mais le taux exact n'y est pas écrit.</div></div>
       <div class="controls">
         <div class="ctl"><label data-i18n="cRate">Taux horaire brut (€)</label><input type="number" id="inRate" value="12.31" step="0.01" min="0"></div>
         <div class="ctl"><label data-i18n="cNight">Majoration nuit (%)</label><input type="number" id="inNight" value="0" step="1" min="0" max="100"></div>
         <div class="ctl"><label data-i18n="cPrec">Indemnité de précarité (%)</label><input type="number" id="inPrec" value="4" step="0.5" min="0" max="20"></div>
+        <div class="ctl"><label data-i18n="cConges">Congés payés (%)</label><input type="number" id="inConges" value="10" step="0.5" min="0" max="20"></div>
         <div class="ctl"><label data-i18n="cNetPct">Net après cotisations (%)</label><input type="number" id="inNetPct" value="78" step="1" min="50" max="100"></div>
       </div>
       <div class="splitbar">
@@ -320,7 +321,7 @@
 
 <footer class="botbar"><div class="botbar-in">
   <span>RGIS</span>
-  <span>·</span><span>v1.2.0</span>
+  <span>·</span><span>v1.3.0</span>
   <span>·</span><span data-i18n="botNote">Estimations non contractuelles</span>
 </div></footer>
 
@@ -329,7 +330,7 @@
 const I18N = {
   en: {
     brand:"My hours & pay", heroTitle:"My RGIS hours & pay estimator",
-    heroSub:"CDD d'usage · €12.31 gross/h · 4% precarity allowance. Change anything you like: totals, charts and transfers recalculate live.",
+    heroSub:"CDD d'usage · €12.31 gross/h · 4% precarity + 10% paid leave. Change anything you like: totals, charts and transfers recalculate live.",
     noticeTitle:"The official RGIS message — September 2026 pay schedule",
     noticeDate:"Communication of 23/09/2026 · 09:36 · translated from French",
     noticeBtn:"⚠️ Important — read me",
@@ -339,13 +340,13 @@ const I18N = {
     noticeP4:"For September: transfer issued by RGIS on <b>12/10/2026</b> (contracts ending between 12 and 30/09/2026). Documents are sent 24–48 hours later.",
     noticeP5:"September pay takes into account variable items (meal allowances, leave, bonuses) from 15/08 to 11/09/2026.\"",
     noticeNote:"📌 Faithful translation of the original message — dates stay in day/month/year format.",
-    coSim:"The <b class=\"hl\">pre-filled values come from your contract</b> (Article 4 \"Remuneration\"). You don't need to touch them: <b class=\"hl\">€12.31/h</b> is your gross hourly rate, <b class=\"hl\">4%</b> is the end-of-contract bonus. The only setting that matters to you: the <b class=\"hl\">night premium</b> — your contract says one exists (company agreement), but the exact rate isn't written in it.",
+    coSim:"The <b class=\"hl\">pre-filled values come from your contract</b> (Articles 4 and 6): <b class=\"hl\">€12.31/h</b> gross, <b class=\"hl\">4%</b> precarity (Art. 4) and <b class=\"hl\">10% paid leave</b> (Art. 6) — both are added to your pay. The only setting that matters: the <b class=\"hl\">night premium</b> — your contract says one exists (company agreement), but the exact rate isn't written in it.",
     coTbl:"The moon <b class=\"hl\">🌙</b> means the mission counts as <b class=\"hl\">night work</b>: it ends after 9 PM or past midnight. RGIS pays those hours <b class=\"hl\">more</b> — the simulator applies the premium automatically. The <b class=\"hl\">✓ verified</b> means the figures come from your screenshots, not an estimate.",
     coPay:"Why <b class=\"hl\">two transfers</b>? Because a CDD d'usage (on-call inventory contract) starts and ends <b class=\"hl\">on the day of each mission</b>. RGIS pays all contracts ended between Sep 12–30 <b class=\"hl\">on Oct 12</b>, and the early-October ones <b class=\"hl\">around Oct 30</b>. So your September and October missions don't land in the same transfer.",
     coNet:"Honestly, gross → net is simple: <b class=\"hl\">gross is the price of your work</b> written in the contract. <b class=\"hl\">Net is what lands in your bank account</b> after the State takes its share (pension, health…). The contract always speaks in gross because <b class=\"hl\">net varies with each person's situation</b> — the employer can't promise it in advance.",
-    stHours:"Total hours", stGross:"Gross + allowance", stNet:"Estimated net", stNext:"Next transfer", stNextSub:"September missions",
+    stHours:"Total hours", stGross:"Gross + bonuses", stNet:"Estimated net", stNext:"Next transfer", stNextSub:"September missions",
     s1Title:"The simulator", s1Desc:"Your contract values are pre-filled. Adjust the night premium once you know the company agreement rate.",
-    cRate:"Gross hourly rate (€)", cNight:"Night premium (%)", cPrec:"Precarity allowance (%)", cNetPct:"Net after contributions (%)",
+    cRate:"Gross hourly rate (€)", cNight:"Night premium (%)", cPrec:"Precarity allowance (%)", cConges:"Paid leave (%)", cNetPct:"Net after contributions (%)",
     lgNet:"Estimated net (before tax)", lgCot:"Employee contributions",
     s2Title:"My missions", s2Desc:"All your missions are entered and verified from your screenshots. The moon 🌙 = night mission (premium applied automatically). Read-only — updates come from your screenshots.",
     scrollHint:"← Swipe the table to see everything →", copyTable:"📋 Copy the table",
@@ -367,7 +368,7 @@ const I18N = {
     rowPrec:"4% precarity", rowPrecX:"Paid at the end of the contract (Article 53, Syntec-CICF collective agreement). It's taxed too, so its net is lower.",
     rowTax:"Income tax", rowTaxX:"Withheld at source at your personal rate, after the net before tax.",
     botMade:"made with", botNote:"Non-contractual estimates",
-    missions:"missions", grossSub:"incl. allowance", netSub:"before income tax", ftGrossPre:"gross w/ allow.",
+    missions:"missions", grossSub:"incl. 4% + 10%", netSub:"before income tax", ftGrossPre:"gross w/ bonuses",
     payHours:"Hours", payGross:"Gross incl. 4%", payNet:"Est. net", est:"Estimated"
   },
   fr: {}
@@ -395,6 +396,7 @@ function params(){
     rate: parseFloat($('inRate').value)||0,
     night: (parseFloat($('inNight').value)||0)/100,
     prec: (parseFloat($('inPrec').value)||0)/100,
+    conges: (parseFloat($('inConges').value)||0)/100,
     netPct: (parseFloat($('inNetPct').value)||78)/100
   };
 }
@@ -431,7 +433,8 @@ function recalc(){
   const totH = missions.reduce((s,m)=>s+m.h,0);
   const grossBase = missions.reduce((s,m)=>s+missionGross(m,p),0);
   const prec = grossBase*p.prec;
-  const gross = grossBase+prec;
+  const conges = (grossBase+prec)*p.conges;
+  const gross = grossBase+prec+conges;
   const net = gross*p.netPct;
   const cot = gross-net;
 
@@ -455,7 +458,7 @@ function recalc(){
   missions.forEach(m=>{ const g=groups[m.month]||groups.sep; g.h+=m.h; g.g+=missionGross(m,p); });
   const pay = {};
   for (const k of ['sep','oct']) {
-    const g = groups[k]; const gp = g.g*(1+p.prec);
+    const g = groups[k]; const gp = g.g*(1+p.prec)*(1+p.conges);
     pay[k] = { h:g.h, g:gp, n:gp*p.netPct };
   }
   const row = (lab,val)=>`<div class="row"><span>${lab}</span><span>${val}</span></div>`;
@@ -480,7 +483,7 @@ $('btnCopy').addEventListener('click', ()=>{
   const done = () => { const b=$('btnCopy'); const old=b.textContent; b.textContent='✓'; setTimeout(()=>b.textContent=old,900); };
   if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done).catch(done); } else done();
 });
-['inRate','inNight','inPrec','inNetPct'].forEach(id=>$(id).addEventListener('input',recalc));
+['inRate','inNight','inPrec','inConges','inNetPct'].forEach(id=>$(id).addEventListener('input',recalc));
 
 /* theme */
 $('btnTheme').addEventListener('click', ()=>{
