@@ -175,7 +175,7 @@
 <body class="day">
 
 <header class="topbar"><div id="scrollfil"></div><div class="topbar-in">
-  <div class="brand"><span class="dot"></span>RGIS · <span data-i18n="brand">Mes heures &amp; ma paie</span></div>
+  <div class="brand"><span class="dot"></span>RGIS · <span data-i18n="brand">Heures &amp; paie de Julien</span></div>
   <div class="langbtns">
     <button class="btn lang active" id="btnFR">🇫🇷 FR</button>
     <button class="btn lang" id="btnEN">🇬🇧 EN</button>
@@ -186,9 +186,9 @@
 <div class="wrap">
 
   <div class="hero">
-    <h1 data-i18n="heroTitle">Mes heures RGIS &amp; mon estimateur de paie</h1>
+    <h1 data-i18n="heroTitle">Heures RGIS &amp; estimateur de paie — Julien Darivon</h1>
     <div class="hero-bar"></div>
-    <p data-i18n="heroSub">CDD d'usage · 12,31 € brut/h · indemnité de précarité 4%. Modifie tout ce que tu veux : les totaux, les graphiques et les virements se recalculent en direct.</p>
+    <p data-i18n="heroSub">Enquêteur vacataire chez RGIS (inventaires) · CDD d'usage · 12,31 € brut/h · précarité 4% + congés payés 10%. Toutes les heures affichées ont été travaillées et vérifiées d'après les captures d'application.</p>
   </div>
 
   <div class="notice" id="noticeCard">
@@ -211,7 +211,7 @@
   </div>
 
   <div class="stats">
-    <div class="stat acc"><div class="lab" data-i18n="stHours">Heures totales</div><div class="val" id="stHours">—</div><div class="sub" id="stMissions"></div></div>
+    <div class="stat acc"><div class="lab" data-i18n="stHours">Heures travaillées</div><div class="val" id="stHours">—</div><div class="sub" id="stMissions"></div></div>
     <div class="stat"><div class="lab" data-i18n="stGross">Brut + primes</div><div class="val" id="stGross">—</div><div class="sub" id="stGrossSub"></div></div>
     <div class="stat gold"><div class="lab" data-i18n="stNet">Net estimé</div><div class="val" id="stNet">—</div><div class="sub" id="stNetSub"></div></div>
     <div class="stat acc"><div class="lab" data-i18n="stNext">Prochain virement</div><div class="val" style="font-size:1.15rem" id="stNext">12/10/2026</div><div class="sub" data-i18n="stNextSub">Missions de septembre</div></div>
@@ -219,9 +219,9 @@
 
   <section>
     <div class="card">
-      <h2><span class="n">1</span><span data-i18n="s1Title">Le simulateur</span></h2>
-      <p class="desc" data-i18n="s1Desc">Les valeurs de ton contrat sont pré-remplies. Ajuste la majoration de nuit quand tu connaîtras le taux de l'accord d'entreprise.</p>
-      <div class="callout info"><span class="ic">ℹ️</span><div data-i18n="coSim">Les valeurs <b class="hl">pré-remplies viennent de ton contrat</b> (articles 4 et 6) : <b class="hl">12,31 €/h</b> brut, <b class="hl">4%</b> de précarité (art. 4) et <b class="hl">10% de congés payés</b> (art. 6) — les deux s'ajoutent à ta paie. Le seul réglage utile : la <b class="hl">majoration de nuit</b> — ton contrat dit qu'elle existe (accord d'entreprise), mais le taux exact n'y est pas écrit.</div></div>
+      <h2><span class="n">1</span><span data-i18n="s1Title">L'estimateur</span></h2>
+      <p class="desc" data-i18n="s1Desc">Les valeurs sont celles du contrat de Julien. La majoration de nuit est ajustable : le taux exact est fixé par l'accord d'entreprise, non reproduit dans le contrat.</p>
+      <div class="callout info"><span class="ic">ℹ️</span><div data-i18n="coSim">Les valeurs <b class="hl">pré-remplies viennent du contrat de Julien</b> (articles 4 et 6) : <b class="hl">12,31 €/h</b> brut, <b class="hl">4%</b> de précarité (art. 4) et <b class="hl">10% de congés payés</b> (art. 6) — les deux s'ajoutent à la paie. Le seul réglage libre : la <b class="hl">majoration de nuit</b> — le contrat indique qu'elle existe (accord d'entreprise), mais le taux exact n'y est pas écrit.</div></div>
       <div class="controls">
         <div class="ctl"><label data-i18n="cRate">Taux horaire brut (€)</label><input type="number" id="inRate" value="12.31" step="0.01" min="0"></div>
         <div class="ctl"><label data-i18n="cNight">Majoration nuit (%)</label><input type="number" id="inNight" value="0" step="1" min="0" max="100"></div>
@@ -242,10 +242,10 @@
 
   <section>
     <div class="card">
-      <h2><span class="n">2</span><span data-i18n="s2Title">Mes missions</span></h2>
-      <p class="desc" data-i18n="s2Desc">Toutes tes missions sont saisies et vérifiées d'après tes captures d'écran. La lune 🌙 = mission de nuit (majoration auto). Lecture seule — les mises à jour se font via tes captures.</p>
+      <h2><span class="n">2</span><span data-i18n="s2Title">Les missions de Julien</span></h2>
+      <p class="desc" data-i18n="s2Desc">Toutes les missions sont saisies et vérifiées d'après les captures d'écran de l'application. La lune 🌙 = mission de nuit (majoration auto). Lecture seule — les mises à jour se font via les captures.</p>
       <div class="tbl-scroll-hint" data-i18n="scrollHint">← Fais glisser le tableau pour voir tout →</div>
-      <div class="callout tip"><span class="ic">💡</span><div data-i18n="coTbl">La lune <b class="hl">🌙</b> veut dire que la mission compte comme du <b class="hl">travail de nuit</b> : elle finit après 21 h ou passe minuit. RGIS te paie ces heures <b class="hl">plus cher</b> que les autres — le simulateur les majore automatiquement. Le <b class="hl">✓ vérifiée</b> signifie que les chiffres viennent de tes captures d'écran, pas d'une estimation.</div></div>
+      <div class="callout tip"><span class="ic">💡</span><div data-i18n="coTbl">La lune <b class="hl">🌙</b> indique une mission comptée comme du <b class="hl">travail de nuit</b> : elle finit après 21 h ou passe minuit. Ces heures sont payées <b class="hl">plus cher</b> que les autres — l'estimateur les majore automatiquement. Le <b class="hl">✓ vérifiée</b> signifie que les chiffres proviennent des captures de l'application RGIS, pas d'une estimation.</div></div>
       <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
       <table id="tbl" style="min-width:640px">
         <thead><tr>
@@ -276,9 +276,9 @@
 
   <section>
     <div class="card">
-      <h2><span class="n">4</span><span data-i18n="s4Title">Mes virements</span></h2>
+      <h2><span class="n">4</span><span data-i18n="s4Title">Les virements</span></h2>
       <p class="desc" data-i18n="s4Desc">Un CDD d'usage = un contrat par mission. La date de virement dépend de la date de fin de chaque contrat.</p>
-      <div class="callout info"><span class="ic">ℹ️</span><div data-i18n="coPay">Pourquoi <b class="hl">deux virements</b> ? Parce qu'un CDD d'usage (contrat de mission d'astreinte pour l'inventaire) commence et finit <b class="hl">le jour même de chaque mission</b>. RGIS paie tous les contrats terminés entre le 12 et le 30/09 <b class="hl">le 12/10</b>, et ceux terminés début octobre <b class="hl">vers le 30/10</b>. Tes missions de septembre et d'octobre ne tombent donc pas dans le même virement.</div></div>
+      <div class="callout info"><span class="ic">ℹ️</span><div data-i18n="coPay">Pourquoi <b class="hl">deux virements</b> ? Parce qu'un CDD d'usage (contrat de mission d'astreinte pour l'inventaire) commence et finit <b class="hl">le jour même de chaque mission</b>. RGIS paie tous les contrats terminés entre le 12 et le 30/09 <b class="hl">le 12/10</b>, et ceux terminés début octobre <b class="hl">vers le 30/10</b>. Les missions de septembre et d'octobre ne tombent donc pas dans le même virement.</div></div>
       <div class="pays">
         <div class="pay">
           <div class="when">💸 12/10/2026<span class="pill" data-i18n="pillSept">Missions de sept.</span></div>
@@ -302,13 +302,13 @@
   <section>
     <div class="card">
       <h2><span class="n">5</span><span data-i18n="s5Title">Brut, net… c'est quoi la différence ?</span></h2>
-      <p class="desc" data-i18n="s5Desc">Pourquoi le contrat annonce 12,31 € et pas ce qui arrive sur ton compte.</p>
-      <div class="callout tip"><span class="ic">💡</span><div data-i18n="coNet">En vrai, la différence brut → net c'est simple : le <b class="hl">brut, c'est le prix de ton travail</b> inscrit sur le contrat. Le <b class="hl">net, c'est ce qui arrive sur ton compte en banque</b> après que l'État ait pris sa part (retraite, santé…). Le contrat parle toujours en brut parce que <b class="hl">le net change selon la situation de chacun</b> — l'employeur ne peut pas le promettre à l'avance.</div></div>
+      <p class="desc" data-i18n="s5Desc">Pourquoi le contrat de Julien annonce 12,31 € et pas ce qui arrive sur son compte.</p>
+      <div class="callout tip"><span class="ic">💡</span><div data-i18n="coNet">En vrai, la différence brut → net c'est simple : le <b class="hl">brut, c'est le prix du travail</b> inscrit sur le contrat. Le <b class="hl">net, c'est ce qui arrive sur le compte en banque</b> après que l'État ait pris sa part (retraite, santé…). Le contrat parle toujours en brut parce que <b class="hl">le net change selon la situation de chacun</b> — l'employeur ne peut pas le promettre à l'avance.</div></div>
       <table>
         <thead><tr><th data-i18n="thItem">Élément</th><th data-i18n="thEx">Explication</th></tr></thead>
         <tbody>
           <tr><td><b data-i18n="rowBrut">Brut</b></td><td data-i18n="rowBrutX">Le montant du contrat, avant déductions. C'est la base des majorations de nuit et de l'indemnité de précarité.</td></tr>
-          <tr><td><b data-i18n="rowCot">Cotisations salariales</b></td><td data-i18n="rowCotX">≈ 21–23% du brut pour un non-cadre : retraite, CSG/CRDS, assurance maladie… retenues sur ta paie.</td></tr>
+          <tr><td><b data-i18n="rowCot">Cotisations salariales</b></td><td data-i18n="rowCotX">≈ 21–23% du brut pour un non-cadre : retraite, CSG/CRDS, assurance maladie… retenues sur la paie.</td></tr>
           <tr><td><b data-i18n="rowNet">Net avant impôt</b></td><td data-i18n="rowNetX">Le brut moins les cotisations : environ 77–79% du brut. C'est le « net à payer » de la fiche de paie.</td></tr>
           <tr><td><b data-i18n="rowPrec">Précarité 4%</b></td><td data-i18n="rowPrecX">Versée à la fin du contrat (article 53, convention Syntec-CICF). Soumise à cotisations, donc son net est plus faible.</td></tr>
           <tr><td><b data-i18n="rowTax">Impôt</b></td><td data-i18n="rowTaxX">Prélevé à la source selon ton taux personnalisé, après le net avant impôt.</td></tr>
@@ -321,7 +321,7 @@
 
 <footer class="botbar"><div class="botbar-in">
   <span>RGIS</span>
-  <span>·</span><span>v1.3.0</span>
+  <span>·</span><span>v1.4.0</span>
   <span>·</span><span data-i18n="botNote">Estimations non contractuelles</span>
 </div></footer>
 
@@ -329,8 +329,8 @@
 /* ---------------- i18n ---------------- */
 const I18N = {
   en: {
-    brand:"My hours & pay", heroTitle:"My RGIS hours & pay estimator",
-    heroSub:"CDD d'usage · €12.31 gross/h · 4% precarity + 10% paid leave. Change anything you like: totals, charts and transfers recalculate live.",
+    brand:"Julien's hours & pay", heroTitle:"RGIS hours & pay estimator — Julien Darivon",
+    heroSub:"Inventory auditor at RGIS · CDD d'usage · €12.31 gross/h · 4% precarity + 10% paid leave. All hours shown have been worked and verified from app screenshots.",
     noticeTitle:"The official RGIS message — September 2026 pay schedule",
     noticeDate:"Communication of 23/09/2026 · 09:36 · translated from French",
     noticeBtn:"⚠️ Important — read me",
@@ -340,30 +340,34 @@ const I18N = {
     noticeP4:"For September: transfer issued by RGIS on <b>12/10/2026</b> (contracts ending between 12 and 30/09/2026). Documents are sent 24–48 hours later.",
     noticeP5:"September pay takes into account variable items (meal allowances, leave, bonuses) from 15/08 to 11/09/2026.\"",
     noticeNote:"📌 Faithful translation of the original message — dates stay in day/month/year format.",
-    coSim:"The <b class=\"hl\">pre-filled values come from your contract</b> (Articles 4 and 6): <b class=\"hl\">€12.31/h</b> gross, <b class=\"hl\">4%</b> precarity (Art. 4) and <b class=\"hl\">10% paid leave</b> (Art. 6) — both are added to your pay. The only setting that matters: the <b class=\"hl\">night premium</b> — your contract says one exists (company agreement), but the exact rate isn't written in it.",
-    coTbl:"The moon <b class=\"hl\">🌙</b> means the mission counts as <b class=\"hl\">night work</b>: it ends after 9 PM or past midnight. RGIS pays those hours <b class=\"hl\">more</b> — the simulator applies the premium automatically. The <b class=\"hl\">✓ verified</b> means the figures come from your screenshots, not an estimate.",
-    coPay:"Why <b class=\"hl\">two transfers</b>? Because a CDD d'usage (on-call inventory contract) starts and ends <b class=\"hl\">on the day of each mission</b>. RGIS pays all contracts ended between Sep 12–30 <b class=\"hl\">on Oct 12</b>, and the early-October ones <b class=\"hl\">around Oct 30</b>. So your September and October missions don't land in the same transfer.",
-    coNet:"Honestly, gross → net is simple: <b class=\"hl\">gross is the price of your work</b> written in the contract. <b class=\"hl\">Net is what lands in your bank account</b> after the State takes its share (pension, health…). The contract always speaks in gross because <b class=\"hl\">net varies with each person's situation</b> — the employer can't promise it in advance.",
+    coSim:"The <b class=\"hl\">pre-filled values come from Julien's contract</b> (Articles 4 and 6): <b class=\"hl\">€12.31/h</b> gross, <b class=\"hl\">4%</b> precarity (Art. 4) and <b class=\"hl\">10% paid leave</b> (Art. 6) — both are added to the pay. The only free setting: the <b class=\"hl\">night premium</b> — the contract says one exists (company agreement), but the exact rate isn't written in it.",
+    coTbl:"The moon <b class=\"hl\">🌙</b> indicates a mission counted as <b class=\"hl\">night work</b>: it ends after 9 PM or past midnight. Those hours are paid <b class=\"hl\">more</b> — the estimator applies the premium automatically. The <b class=\"hl\">✓ verified</b> means the figures come from the RGIS app screenshots, not an estimate.",
+    coPay:"Why <b class=\"hl\">two transfers</b>? Because a CDD d'usage (on-call inventory contract) starts and ends <b class=\"hl\">on the day of each mission</b>. RGIS pays all contracts ended between Sep 12–30 <b class=\"hl\">on Oct 12</b>, and the early-October ones <b class=\"hl\">around Oct 30</b>. So September and October missions don't land in the same transfer.",
+    coNet:"Honestly, gross → net is simple: <b class=\"hl\">gross is the price of the work</b> written in the contract. <b class=\"hl\">Net is what lands in the bank account</b> after the State takes its share (pension, health…). The contract always speaks in gross because <b class=\"hl\">net varies with each person's situation</b> — the employer can't promise it in advance.",
     stHours:"Total hours", stGross:"Gross + bonuses", stNet:"Estimated net", stNext:"Next transfer", stNextSub:"September missions",
-    s1Title:"The simulator", s1Desc:"Your contract values are pre-filled. Adjust the night premium once you know the company agreement rate.",
+    s1Title:"The estimator", s1Desc:"Values are those of Julien's contract. The night premium is adjustable: its exact rate is set by the company agreement, not included in the contract.",
     cRate:"Gross hourly rate (€)", cNight:"Night premium (%)", cPrec:"Precarity allowance (%)", cConges:"Paid leave (%)", cNetPct:"Net after contributions (%)",
     lgNet:"Estimated net (before tax)", lgCot:"Employee contributions",
-    s2Title:"My missions", s2Desc:"All your missions are entered and verified from your screenshots. The moon 🌙 = night mission (premium applied automatically). Read-only — updates come from your screenshots.",
+    s2Title:"Julien's missions", s2Desc:"All missions are entered and verified from the app screenshots. The moon 🌙 = night mission (premium applied automatically). Read-only — updates come from the screenshots.",
     scrollHint:"← Swipe the table to see everything →", copyTable:"📋 Copy the table",
     thDate:"Date", thPlace:"Place", thTime:"Times", thHours:"Hours", thNight:"Night", thChecked:"Status", ftTotal:"Total",
     verified:"verified",
     s3Title:"Charts", s3Desc:"Hours per mission (green = paid Oct 12, gold = paid end of October).",
-    s4Title:"My transfers", s4Desc:"One CDD d'usage = one contract per mission. The transfer date depends on each contract's end date.",
+    s4Title:"Les virements", s4Desc:"Un CDD d'usage = un contrat par mission. La date de virement dépend de la date de fin de chaque contrat.",
+    s5Title:"Brut, net… c'est quoi la différence ?", s5Desc:"Pourquoi le contrat de Julien annonce 12,31 € et pas ce qui arrive sur son compte.",
+    s1Title:"L'estimateur", s1Desc:"Les valeurs sont celles du contrat de Julien. La majoration de nuit est ajustable : le taux exact est fixé par l'accord d'entreprise, non reproduit dans le contrat.",
+    s2Title:"Les missions de Julien", s2Desc:"Toutes les missions sont saisies et vérifiées d'après les captures d'écran de l'application. La lune 🌙 = mission de nuit (majoration auto). Lecture seule — les mises à jour se font via les captures.",
+    s4Title:"The transfers", s4Desc:"One CDD d'usage = one contract per mission. The transfer date depends on each contract's end date.",
     pillSept:"Sept. missions", pillOct:"Oct. missions",
     pay2Note:"Date inferred from the September rhythm — not confirmed by the official message.",
     msgTitle:"📄 Re-read the official RGIS message",
     msgBody:"Communication of 23/09/2026 — September 2026 pay schedule: first-half payslips are sent at the end of the month (RGIS transfer on 30/09/2026 for contracts ended between Sep 1–11, or continuing into October). Second-half payslips are sent mid-following-month (transfer on 12/10/2026 for contracts ended between Sep 12–30). Variable items (meal allowances, leave, bonuses) are counted from Aug 15 to Sep 11.",
     msgNote:"The full message is also shown in the notice card at the top of the page.",
     s4Warn:"⚠️ All amounts are estimates. Only the payslip is definitive — check each mission's hours appear on it.",
-    s5Title:"Gross, net… what's the difference?", s5Desc:"Why the contract says €12.31 and not what lands in your account.",
+    s5Title:"Gross, net… what's the difference?", s5Desc:"Why Julien's contract says €12.31 and not what lands in his account.",
     thItem:"Item", thEx:"Explanation",
     rowBrut:"Gross", rowBrutX:"The contract amount, before deductions. It's the base for night premiums and the precarity allowance.",
-    rowCot:"Employee contributions", rowCotX:"≈ 21–23% of gross for a non-executive: pension, CSG/CRDS, health insurance… withheld from your pay.",
+    rowCot:"Employee contributions", rowCotX:"≈ 21–23% of gross for a non-executive: pension, CSG/CRDS, health insurance… withheld from the pay.",
     rowNet:"Net before tax", rowNetX:"Gross minus contributions: about 77–79% of gross. It's the \"net à payer\" on the payslip.",
     rowPrec:"4% precarity", rowPrecX:"Paid at the end of the contract (Article 53, Syntec-CICF collective agreement). It's taxed too, so its net is lower.",
     rowTax:"Income tax", rowTaxX:"Withheld at source at your personal rate, after the net before tax.",
