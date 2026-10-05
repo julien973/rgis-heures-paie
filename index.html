@@ -152,6 +152,9 @@
   .notice{margin:26px 0;border:1px solid var(--accent);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow-md);overflow:hidden}
   .notice-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--accent-soft);flex-wrap:wrap}
   .notice-icon{font-size:1.5rem}
+  #btnNotice .ic-warn{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#c2410c;color:#fff;font-weight:800;font-size:.72rem;line-height:1}
+  #btnNotice.open-state{background:#0d7a68;border-color:#0d7a68;color:#fff}
+  body.night #btnNotice.open-state{color:#06231e}
   .notice-title{font-weight:800;font-size:.95rem}
   .notice-date{font-size:.74rem;color:var(--muted)}
   .notice-head .btn{margin-left:auto}
@@ -165,7 +168,7 @@
   .botbar-in{max-width:980px;margin:0 auto;padding:8px 18px;display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
   .langbtns{display:flex;gap:0}
   .langbtns .btn{border-radius:0;padding:6px 12px;font-size:.8rem;display:flex;align-items:center;gap:6px}
-  .langbtns .flag{width:17px;height:12px;border-radius:2px;object-fit:cover;display:block;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+  .langbtns .flag{width:18px;height:12px;border-radius:2px;object-fit:cover;display:inline-block;box-shadow:0 0 0 1px rgba(0,0,0,.18);flex-shrink:0}
   .langbtns .btn:first-child{border-radius:999px 0 0 999px;border-right:none}
   .langbtns .btn:last-child{border-radius:0 999px 999px 0}
   .langbtns .btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -178,7 +181,7 @@
 <header class="topbar"><div id="scrollfil"></div><div class="topbar-in">
   <div class="brand"><span class="dot"></span>RGIS · <span data-i18n="brand">Heures &amp; paie de Julien</span></div>
   <div class="langbtns">
-    <button class="btn lang active" id="btnFR"><img class="flag" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='3' height='2' fill='%23fff'/%3E%3Crect width='2' height='2' fill='%230055A4'/%3E%3Crect x='2' width='1' height='2' fill='%23EF4135'/%3E%3C/svg%3E">FR</button>
+    <button class="btn lang active" id="btnFR"><img class="flag" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='10' height='20' fill='%230055A4'/%3E%3Crect x='10' width='10' height='20' fill='%23fff'/%3E%3Crect x='20' width='10' height='20' fill='%23EF4135'/%3E%3C/svg%3E">FR</button>
     <button class="btn lang" id="btnEN"><img class="flag" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='c'%3E%3Cpath d='M0 0h60v30H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='60' height='30' fill='%23002169'/%3E%3Cpath d='M0 0l60 30M60 0L0 30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0 0l60 30M60 0L0 30' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E">EN</button>
   </div>
   <button class="btn" id="btnTheme" title="Jour / Nuit">🌙</button>
@@ -199,7 +202,7 @@
         <div class="notice-title" data-i18n="noticeTitle">Le message officiel RGIS — rythme de paie de septembre 2026</div>
         <div class="notice-date" data-i18n="noticeDate">Communication du 23/09/2026 · 09:36 · traduite du français</div>
       </div>
-      <button class="btn" id="btnNotice" data-i18n="noticeBtn">⚠️ Important — lire</button>
+      <button class="btn" id="btnNotice"><span class="ic-warn">!</span> <span data-i18n="noticeBtn">Important — lire le message officiel</span></button>
     </div>
     <div class="notice-body" id="noticeBody">
       <p data-i18n="noticeP1">« Pour information, les documents et virements des paies de la première quinzaine du mois sont envoyés en fin de mois.</p>
@@ -322,7 +325,7 @@
 
 <footer class="botbar"><div class="botbar-in">
   <span>RGIS</span>
-  <span>·</span><span>v1.4.5</span>
+  <span>·</span><span>v1.4.6</span>
   <span>·</span><span data-i18n="botNote">Estimations non contractuelles</span>
 </div></footer>
 
@@ -334,7 +337,7 @@ const I18N = {
     heroSub:"Inventory auditor at RGIS · CDD d'usage (a French fixed-term contract for occasional, same-day missions) · €12.31 gross/h · 4% precarity + 10% paid leave. All hours shown have been actually worked.",
     noticeTitle:"The official RGIS message — September 2026 pay schedule",
     noticeDate:"Communication of 23/09/2026 · 09:36 · translated from French",
-    noticeBtn:"⚠️ Important — read me",
+    noticeBtn:"Important — read the official message",
     noticeP1:"\"For your information, the payslips and bank transfers for the first half of the month are sent at the end of the month.",
     noticeP2:"For September: transfer issued by RGIS on <b>30/09/2026</b> (contracts ending between 01 and 11/09/2026, or continuing into October). Documents are sent 24–48 hours later.",
     noticeP3:"The payslips and bank transfers for the second half of the month are sent in the \"middle\" of the following month.",
@@ -511,14 +514,19 @@ function applyLang(){
 /* notice toggle */
 $('btnNotice').addEventListener('click', ()=>{
   const open = $('noticeCard').classList.toggle('open');
-  $('btnNotice').textContent = open ? (LANG==='fr'?'✓ Lu — refermer':'✓ Read — close') : t('noticeBtn');
+  updateNoticeBtn(open);
 });
+function updateNoticeBtn(open){
+  const b = $('btnNotice');
+  b.classList.toggle('open-state', open);
+  const span = b.querySelector('[data-i18n]');
+  span.textContent = open ? (LANG==='fr' ? 'Lu — refermer' : 'Read — close') : t('noticeBtn');
+}
 function setLang(l){
   if(l===LANG) return;
   LANG = l;
   applyLang();
-  $('noticeCard').classList.remove('open');
-  $('btnNotice').textContent = t('noticeBtn');
+  updateNoticeBtn($('noticeCard').classList.contains('open'));
   $('btnFR').classList.toggle('active', LANG==='fr');
   $('btnEN').classList.toggle('active', LANG==='en');
 }
