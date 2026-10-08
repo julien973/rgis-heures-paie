@@ -338,7 +338,7 @@
 
 <footer class="botbar"><div class="botbar-in">
   <span>RGIS</span>
-  <span>·</span><span>v1.7.0</span>
+  <span>·</span><span>v1.7.2</span>
   <span>·</span><span data-i18n="botNote">Estimations non contractuelles</span>
 </div></footer>
 
@@ -393,6 +393,15 @@ const I18N = {
 };
 let LANG = 'fr';
 const t = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
+/* clés FR utilisées uniquement en JS (absentes du HTML data-i18n) —
+   nécessaires AVANT le premier recalc() au chargement, car applyLang()
+   ne s'exécute qu'au premier clic FR/EN */
+I18N.fr.ftGrossPre = "brut avec primes";
+I18N.fr.payHours = "Heures";
+I18N.fr.payGross = "Brut avec 4% + 10%";
+I18N.fr.payNet = "Net estimé";
+I18N.fr.netSub = "avant impôt sur le revenu";
+I18N.fr.grossSub = "incl. 4% + 10%";
 
 /* ---------------- data ---------------- */
 let missions = [
@@ -515,6 +524,12 @@ function applyLang(){
   // capture the original French text on first run so we can switch back
   if(!I18N.fr.__init){
     document.querySelectorAll('[data-i18n]').forEach(el=>{ I18N.fr[el.dataset.i18n] = el.innerHTML; });
+    I18N.fr.ftGrossPre = "brut avec primes";
+    I18N.fr.payHours = "Heures";
+    I18N.fr.payGross = "Brut avec 4% + 10%";
+    I18N.fr.payNet = "Net estimé";
+    I18N.fr.netSub = "avant impôt sur le revenu";
+    I18N.fr.grossSub = "incl. 4% + 10%";
     I18N.fr.__init = true;
   }
   document.documentElement.lang = LANG==='fr'?'fr':'en';
